@@ -80,6 +80,7 @@ A user-facing consultation platform will allow real-time input of symptoms, show
 2. Li et al. (2024). *Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents*  
 3. Dai et al. (2024). *DeepSeekMoE*  
 4. Xie et al. (2024). *Me-LLaMA: Foundation LLMs for Medical Applications*
+5. https://github.com/OpenSparseLLMs/LLaMA-MoE-v2
 
 ---
 
