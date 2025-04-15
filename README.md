@@ -1,7 +1,8 @@
 Here’s a professional GitHub README tailored for your **Agent Hospital Architecture Optimization using MedLLaMA with Mixture of Experts** project:
 
 ---
-![llama doctors](/images/dr_llama.png)
+<img src="/images/dr_llama.png" width="300" alt="dr llama photo">
+
 
 # 🏥 Agent Hospital Optimization via MedLLaMA + Mixture of Experts
 
