@@ -91,6 +91,3 @@ A user-facing consultation platform will allow real-time input of symptoms, show
 - Integrating with existing quantized/LoRA-tuned LLaMA variants
 - Exploring Mixtral and DeepSeek insights for model evolution
 
----
-
-Let me know if you want a badge-based summary (build status, license, paper links), a Python-based `demo.py` launcher, or Markdown diagrams for architecture!
