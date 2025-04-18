@@ -1,0 +1,102 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "54663fa2-5761-4f30-85d2-167710ee2141",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "pred_path = 'mellama_pubmedqa_predictions.json'\n",
+    "gt_path = 'pubmedqa/data/test_ground_truth.json'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "bfc25809-930d-4645-b151-18d27a681880",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "/home/dyh2111/moeme/model\n"
+     ]
+    }
+   ],
+   "source": [
+    "import os\n",
+    "print(os.getcwd())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "c504f65c-a487-4a4f-b802-8fc32bfdc362",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Accuracy 0.414000\n",
+      "Macro-F1 0.317252\n"
+     ]
+    }
+   ],
+   "source": [
+    "import json\n",
+    "from sklearn.metrics import accuracy_score, f1_score\n",
+    "import sys\n",
+    "\n",
+    "\n",
+    "ground_truth = json.load(open(gt_path)) \n",
+    "predictions = json.load(open(pred_path))\n",
+    "\n",
+    "assert set(list(ground_truth)) == set(list(predictions)), 'Please predict all and only the instances in the test set.'\n",
+    "\n",
+    "pmids = list(ground_truth)\n",
+    "truth = [ground_truth[pmid] for pmid in pmids]\n",
+    "preds = [predictions[pmid] for pmid in pmids]\n",
+    "\n",
+    "acc = accuracy_score(truth, preds)\n",
+    "maf = f1_score(truth, preds, average='macro')\n",
+    "\n",
+    "print('Accuracy %f' % acc)\n",
+    "print('Macro-F1 %f' % maf)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3319733c-4bee-4b0a-a3e9-87e0f734183d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python (moeme)",
+   "language": "python",
+   "name": "moeme"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.16"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
