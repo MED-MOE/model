@@ -99,3 +99,6 @@ A user-facing consultation platform will allow real-time input of symptoms, show
 1x large model: ~2.5–2.7B parameters
 Routing/output networks: ~100–200M combined
 Keep total ≤ 6.5–7B parameters (FP16)
+
+https://nvidia.github.io/TensorRT-Model-Optimizer/getting_started/7_sparsity.html
+https://github.com/horseee/LLM-Pruner#1-pruning-discovery-stage--estimation-stage
