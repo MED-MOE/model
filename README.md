@@ -91,3 +91,11 @@ A user-facing consultation platform will allow real-time input of symptoms, show
 - Integrating with existing quantized/LoRA-tuned LLaMA variants
 - Exploring Mixtral and DeepSeek insights for model evolution
 
+
+
+## NOTES:
+✅ Recommended Target
+3x small models: ~1.3B parameters each
+1x large model: ~2.5–2.7B parameters
+Routing/output networks: ~100–200M combined
+Keep total ≤ 6.5–7B parameters (FP16)
