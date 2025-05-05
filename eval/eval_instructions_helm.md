@@ -11,6 +11,8 @@ source helm-venv/bin/activate
 sudo apt-get update
 sudo apt-get install python3.9-dev
 pip install blis
+pip install --upgrade pip
+pip install crfm-helm
 
 
 # Download configurations to your root folder
