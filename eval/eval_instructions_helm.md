@@ -61,6 +61,10 @@ helm-run \
   --suite med \
   --models-to-run Qwen/Qwen3-0.6B \
   --enable-huggingface-models Qwen/Qwen3-0.6B
+
+# Or run in nohup
+nohup bash -c 'helm-run --run-entries pubmed_qa --max-eval-instances 10000 --suite med --models-to-run Qwen/Qwen3-0.6B --enable-huggingface-models Qwen/Qwen3-0.6B && helm-summarize --schema schema_medhelm.yaml --suite med' > helm_run.log 2>&1 &
+
 ```
 
 ---
