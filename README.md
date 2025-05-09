@@ -5,14 +5,14 @@
 
 
 
-# 🏥 Agent Hospital Optimization via MedLLaMA + Mixture of Experts
+# 🏥 Agent Hospital Optimization via Llama-3-8B-UltraMedical + Mixture of Experts
 
 **A research project by Xinzhuo Jiang and Dan Harvey**  
 **Course: HPML | Columbia University**
 
 ## 🧠 Overview
 
-Inspired by Jacobs et al.’s Mixture of Experts (MoE) and the Agent Hospital framework, this project proposes a novel optimization of clinical decision-making systems using **domain-specialized MedLLaMA experts** coordinated by an intelligent **gating network**—a virtual nurse dynamically routing patient queries to the right specialists.
+Inspired by Jacobs et al.’s Mixture of Experts (MoE) and the Agent Hospital framework, this project proposes a novel optimization of clinical decision-making systems using **domain-specialized Llama-3-8B-UltraMedical experts** coordinated by an intelligent **gating network**—a virtual nurse dynamically routing patient queries to the right specialists.
 
 Our goal is to deliver improved medical inference efficiency, diagnostic accuracy, and energy-aware compute through expert distillation, pruning, and smart expert selection.
 
@@ -43,7 +43,7 @@ Our goal is to deliver improved medical inference efficiency, diagnostic accurac
 - Top-K routing via softmax scoring
 
 ### 🧬 Expert Formation
-- Extract 5 domain experts from MedLLaMA (Internal Medicine, Neurology, etc.)
+- Extract 3 domain experts from Llama-3-8B-UltraMedical (Cardiology, Orthopedic, Mental Health)
 - Two distillation strategies:
   - **Activation-based pruning** (via forward hooks)
   - **Sparse dropout masking**
@@ -61,7 +61,7 @@ Our goal is to deliver improved medical inference efficiency, diagnostic accurac
 We will assess:
 - **Accuracy** on board-style medical questions and synthetic patient scenarios
 - **Efficiency** using power/memory profiling tools
-- **Zero-shot performance** vs. the base MedLLaMA model
+- **Zero-shot performance** vs. the base Llama-3-8B-UltraMedical model
 
 ---
 
@@ -79,7 +79,7 @@ A user-facing consultation platform will allow real-time input of symptoms, show
 1. Jacobs et al. (1991). *Adaptive Mixtures of Local Experts*  
 2. Li et al. (2024). *Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents*  
 3. Dai et al. (2024). *DeepSeekMoE*  
-4. Xie et al. (2024). *Me-LLaMA: Foundation LLMs for Medical Applications*
+4. Zhang et al. (2024). *UltraMedical: Building Specialized Generalists in Biomedicine*
 5. https://github.com/OpenSparseLLMs/LLaMA-MoE-v2
 
 ---
@@ -102,3 +102,10 @@ Keep total ≤ 6.5–7B parameters (FP16)
 
 https://nvidia.github.io/TensorRT-Model-Optimizer/getting_started/7_sparsity.html
 https://github.com/horseee/LLM-Pruner#1-pruning-discovery-stage--estimation-stage
+
+## Extracted Experts on Hugging Face
+🤗 Cardiology Expert: https://huggingface.co/med-moe/llama3-8B-UltraMedical-MoE-Cardiology-Expert
+
+🤗 Orthopedic Expert: https://huggingface.co/med-moe/llama3-8B-UltraMedical-MoE-Orthopedic-Expert
+
+🤗 MentalHealth Expert: https://huggingface.co/med-moe/llama3-8B-UltraMedical-MoE-MentalHealth-Expert
