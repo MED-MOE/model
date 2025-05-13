@@ -5,7 +5,7 @@
 
 
 
-# 🏥 Agent Hospital Optimization via Llama-3-8B-UltraMedical + Mixture of Experts
+# 🏥 Mixture of Experts for Medical Domain Optimization 
 
 **A research project by Xinzhuo Jiang and Dan Harvey**  
 **Course: HPML | Columbia University**
